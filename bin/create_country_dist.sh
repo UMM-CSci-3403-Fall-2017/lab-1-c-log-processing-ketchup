@@ -6,7 +6,7 @@ join -j1 ./etc/country_IP_map.txt failed_login.txt | awk '{print $2;}' | sort | 
 
 rm failed_login.txt
 
-./bin/wrap_contents.sh failed.txt ./html_components/hours_dist $1/hours_dist.html
+./bin/wrap_contents.sh failed.txt ./html_components/country_dist $1/country_dist.html
 
 rm failed.txt
 
