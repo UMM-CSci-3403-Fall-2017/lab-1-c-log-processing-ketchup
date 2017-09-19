@@ -6,9 +6,10 @@ cd $SCRATCH
 
 for arg in "$@"
 do 
-	name=$(echo $arg | cut -f 1 -d '_')
+	tempname=$(basename $arg)
+	name=$(echo $tempname | cut -f 1 -d '_')
 	mkdir $name
-	tar -zxf $home/log_files/$arg -C $name
+	tar -zxf $home/$arg -C $name
 
 done
 
